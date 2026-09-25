@@ -1,0 +1,109 @@
+.at-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.at-step {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 26px;
+}
+
+.at-step:last-child {
+    padding-bottom: 0;
+}
+
+.at-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 28px;
+    bottom: 2px;
+    width: 2px;
+    background: var(--border-strong);
+}
+
+.at-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 2px solid var(--border-strong);
+    border-radius: 50%;
+}
+
+.at-done .at-icon {
+    background: var(--badge-green-text);
+    border-color: var(--badge-green-text);
+    color: var(--card-bg);
+}
+
+.at-current .at-icon {
+    border-color: var(--accent-color);
+}
+
+.at-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.at-rejected .at-icon {
+    background: var(--badge-red-text);
+    border-color: var(--badge-red-text);
+    color: var(--card-bg);
+}
+
+.at-body {
+    min-width: 0;
+}
+
+.at-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.at-upcoming .at-title {
+    color: var(--text-muted);
+}
+
+.at-rejected .at-title {
+    color: var(--badge-red-text);
+}
+
+.at-detail {
+    margin: 2px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.at-action {
+    margin-top: 12px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 12px;
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.15s;
+}
+
+.at-action:hover {
+    opacity: 0.9;
+}
+
+.at-action:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}

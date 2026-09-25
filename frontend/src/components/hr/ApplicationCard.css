@@ -1,0 +1,250 @@
+.hac-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: border-color 0.15s;
+}
+
+.hac-card:hover {
+    border-color: var(--border-strong);
+}
+
+.hac-main {
+    display: flex;
+    gap: 1rem;
+}
+
+.hac-avatar {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--avatar-bg);
+    color: var(--avatar-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.hac-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.hac-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.hac-name {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hac-name-link {
+    cursor: pointer;
+}
+
+.hac-name-link:hover {
+    text-decoration: underline;
+}
+
+.hac-email {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 0.125rem;
+}
+
+.hac-job-line {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.hac-job-line strong {
+    color: var(--text-primary);
+}
+
+.hac-job-link {
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s;
+}
+
+.hac-job-link:hover {
+    text-decoration-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.hac-extra-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.hac-match-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hac-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+}
+
+.hac-chip {
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 8px;
+    background: var(--chip-bg);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.hac-chip-matched {
+    background: var(--badge-green-bg);
+    color: var(--badge-green-text);
+    font-weight: 600;
+}
+
+.hac-chip-missing {
+    background: var(--chip-bg);
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.hac-duplicate-warning {
+    padding: 0.625rem 0.875rem;
+    background: var(--badge-red-bg);
+    border-radius: 10px;
+}
+
+.hac-duplicate-warning strong {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--badge-red-text);
+    margin-bottom: 0.125rem;
+}
+
+.hac-duplicate-warning p {
+    font-size: 0.8125rem;
+    color: var(--badge-red-text);
+}
+
+.hac-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    padding-top: 1.125rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.hac-btn {
+    padding: 0.5625rem 1rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.15s;
+}
+
+.hac-btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+}
+
+.hac-btn-secondary:hover {
+    background: var(--hover-bg);
+}
+
+.hac-btn-primary {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: 1px solid transparent;
+}
+
+.hac-btn-primary:hover {
+    opacity: 0.9;
+}
+
+.hac-btn-danger {
+    background: transparent;
+    color: var(--badge-red-text);
+    border: 1px solid var(--badge-red-bg);
+}
+
+.hac-btn-danger:hover {
+    background: var(--badge-red-bg);
+}
+
+@media (max-width: 640px) {
+    .hac-top-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hac-actions {
+        flex-direction: column;
+    }
+
+    .hac-actions .hac-btn {
+        width: 100%;
+    }
+}
+
+.hac-assessment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.625rem 0.875rem;
+    background: var(--color-bg-secondary);
+    border-radius: 10px;
+}
+
+.hac-assessment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+.hac-assessment-badge svg {
+    flex-shrink: 0;
+}
+
+.hac-btn-text {
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.hac-btn-text:hover {
+    background: var(--hover-bg);
+}

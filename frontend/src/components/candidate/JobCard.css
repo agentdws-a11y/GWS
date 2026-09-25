@@ -1,0 +1,146 @@
+.jc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    transition: border-color 0.15s;
+}
+
+.jc-card:hover {
+    border-color: var(--border-strong);
+}
+
+.jc-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.jc-heading {
+    min-width: 0;
+}
+
+.jc-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.jc-title-link {
+    padding: 0;
+    text-align: left;
+    font: inherit;
+    color: var(--text-primary);
+    transition: color 0.15s;
+}
+
+.jc-title-link:hover {
+    color: var(--accent-color);
+}
+
+.jc-title-link:focus-visible,
+.jc-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.jc-dept {
+    margin: 2px 0 0;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.jc-applied {
+    flex-shrink: 0;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--badge-green-bg);
+    color: var(--badge-green-text);
+}
+
+.jc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.jc-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.jc-meta svg {
+    color: var(--text-muted);
+}
+
+.jc-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jc-chip {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: var(--chip-bg);
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.jc-footer {
+    margin-top: auto;
+    padding-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.jc-closes {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.jc-btn {
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.jc-btn:hover {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border-color: var(--btn-primary-bg);
+}
+
+@media (max-width: 480px) {
+    .jc-card {
+        padding: 20px;
+    }
+
+    .jc-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .jc-closes {
+        text-align: center;
+    }
+}

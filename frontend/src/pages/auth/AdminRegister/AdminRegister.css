@@ -1,0 +1,298 @@
+.admin-register-page {
+    --bg-primary: #0e0d14;
+    --card-bg: rgba(27, 25, 39, 0.72);
+    --border-color: rgba(255, 255, 255, 0.09);
+    --text-primary: #f4f3fb;
+    --text-secondary: #a5a2bd;
+    --text-tertiary: #6b687e;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --primary-color: #8f82f8;
+    --primary-hover: #a99cff;
+    --danger-color: #f87171;
+    --bg-secondary: rgba(255, 255, 255, 0.03);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+:root[data-theme="light"] .admin-register-page {
+    --bg-primary: #f4f3fc;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --border-color: rgba(96, 84, 180, 0.16);
+    --text-primary: #1b1930;
+    --text-secondary: #5f5c7a;
+    --text-tertiary: #8b869f;
+    --input-bg: #ffffff;
+    --primary-color: #6152e8;
+    --primary-hover: #5243d9;
+    --danger-color: #dc2626;
+    --bg-secondary: #f8f7fc;
+    --hover-bg: #f0eff7;
+}
+
+.admin-register-page::before,
+.admin-register-page::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.admin-register-page::before {
+    width: 46vmax;
+    height: 46vmax;
+    top: -18vmax;
+    left: -14vmax;
+    background: radial-gradient(circle, rgba(124, 111, 240, 0.45), transparent 65%);
+}
+
+.admin-register-page::after {
+    width: 40vmax;
+    height: 40vmax;
+    bottom: -16vmax;
+    right: -12vmax;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.28), transparent 65%);
+}
+
+.admin-register-container {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 36px !important;
+    width: auto !important;
+    max-width: 180px !important;
+    object-fit: contain !important;
+    z-index: 10;
+}
+
+.verify-loading {
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 20px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.verify-loading p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.error-box {
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.error-box svg {
+    color: var(--danger-color);
+    margin-bottom: 20px;
+}
+
+.error-box h2 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.error-box p {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.btn-back-to-login {
+    padding: 10px 24px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-back-to-login:hover {
+    background: var(--primary-hover);
+}
+
+.admin-register-content {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.admin-register-content h1 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.invite-info {
+    margin: 0 0 32px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.invite-info strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.error-message {
+    padding: 12px 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #ef4444;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-register-form {
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group input.input-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: var(--bg-secondary);
+}
+
+.form-group input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-group input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.btn-create-account {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(143, 130, 248, 0.3);
+}
+
+.btn-create-account:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(143, 130, 248, 0.4);
+}
+
+.btn-create-account:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .admin-register-content {
+        padding: 32px 24px;
+    }
+
+    .admin-register-content h1 {
+        font-size: 24px;
+    }
+
+    .invite-info {
+        font-size: 13px;
+    }
+}

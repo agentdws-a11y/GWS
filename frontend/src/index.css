@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #1a1a1a;
+  --card-bg: #242424;
+  --nav-bg: #1e1e1e;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #f5f5f5;
+  --text-secondary: #d4d4d4;
+  --text-muted: #a1a1aa;
+  --accent-color: #a5a6f6;
+  --accent-hover: #9091f0;
+  
+  --badge-green-bg: rgba(16, 185, 129, 0.15);
+  --badge-green-text: #34d399;
+  --badge-yellow-bg: rgba(251, 191, 36, 0.15);
+  --badge-yellow-text: #fbbf24;
+  --badge-red-bg: rgba(239, 68, 68, 0.15);
+  --badge-red-text: #f87171;
+  
+  --nav-active-bg: rgba(255, 255, 255, 0.08);
+  --hover-bg: rgba(255, 255, 255, 0.03);
+  --icon-color: rgba(255, 255, 255, 0.6);
+  --icon-hover: rgba(255, 255, 255, 0.9);
+  
+  --avatar-bg: rgba(165, 166, 246, 0.18);
+  --avatar-text: #a5a6f6;
+  
+  --btn-primary-bg: #f0efe9;
+  --btn-primary-text: #1a1a1a;
+  
+  --badge-open-bg: rgba(74, 222, 128, 0.15);
+  --badge-open-text: #86efac;
+  --badge-draft-bg: rgba(250, 204, 21, 0.15);
+  --badge-draft-text: #fde047;
+  --badge-closed-bg: rgba(255, 255, 255, 0.06);
+  --badge-closed-text: var(--text-muted);
+  
+  --table-header-bg: rgba(255, 255, 255, 0.03);
+  
+  --chip-bg: rgba(255, 255, 255, 0.06);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="light"] {
+  --page-bg: #f5f5f7;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --text-primary: #18181b;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+  
+  --badge-green-bg: rgba(16, 185, 129, 0.1);
+  --badge-green-text: #059669;
+  --badge-yellow-bg: rgba(251, 191, 36, 0.1);
+  --badge-yellow-text: #d97706;
+  --badge-red-bg: rgba(239, 68, 68, 0.1);
+  --badge-red-text: #dc2626;
+  
+  --nav-active-bg: rgba(0, 0, 0, 0.06);
+  --hover-bg: rgba(0, 0, 0, 0.03);
+  --icon-color: rgba(0, 0, 0, 0.6);
+  --icon-hover: rgba(0, 0, 0, 0.9);
+  
+  --avatar-bg: rgba(79, 70, 229, 0.12);
+  --avatar-text: #4f46e5;
+  
+  --btn-primary-bg: #18181b;
+  --btn-primary-text: #ffffff;
+  
+  --badge-open-bg: rgba(22, 163, 74, 0.12);
+  --badge-open-text: #15803d;
+  --badge-draft-bg: rgba(202, 138, 4, 0.12);
+  --badge-draft-text: #a16207;
+  --badge-closed-bg: rgba(0, 0, 0, 0.05);
+  --badge-closed-text: var(--text-muted);
+  
+  --table-header-bg: rgba(0, 0, 0, 0.02);
+  
+  --chip-bg: rgba(0, 0, 0, 0.05);
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background 0.2s, color 0.2s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A3948;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4C4B5E;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.08); }
+  66% { transform: translate(-24px, 20px) scale(0.95); }
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-bg);
+}
+
+.app-main {
+  flex: 1;
+  margin-top: 64px;
+  padding: 0;
+}
+
+.app-content {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 0;
+  }
+}

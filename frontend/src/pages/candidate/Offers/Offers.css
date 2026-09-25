@@ -1,0 +1,45 @@
+.co-page { max-width: 820px; margin: 0 auto; padding: 24px; }
+.co-header { margin-bottom: 20px; }
+.co-title { font-size: 24px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px; }
+.co-subtitle { margin: 0; font-size: 14px; color: var(--text-secondary, #8a8f98); }
+
+.co-state, .co-empty { padding: 32px 0; text-align: center; color: var(--text-secondary, #8a8f98); }
+.co-empty h3 { color: var(--text-primary); margin: 0 0 6px; }
+
+.co-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+.co-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.co-job { font-size: 18px; font-weight: 600; color: var(--text-primary); margin: 0; }
+.co-dept { margin: 2px 0 0; font-size: 13px; color: var(--text-secondary, #8a8f98); }
+
+.co-facts { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 16px; }
+.co-fact-label { display: block; font-size: 12px; color: var(--text-secondary, #8a8f98); }
+.co-fact-value { display: block; font-size: 14px; font-weight: 500; color: var(--text-primary); }
+
+.co-letter {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 0 0 16px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.co-actions { display: flex; justify-content: flex-end; gap: 12px; }
+.co-answered { margin: 0; font-size: 14px; color: var(--text-secondary, #8a8f98); }
+
+.co-btn { border: none; border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.co-btn-primary { background: #2563eb; color: #fff; }
+.co-btn-danger { background: transparent; color: #ef4444; border: 1px solid #ef4444; }
+.co-btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border-subtle); }

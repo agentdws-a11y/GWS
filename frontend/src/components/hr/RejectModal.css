@@ -1,0 +1,109 @@
+.hrm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 1rem;
+}
+
+.hrm-dialog {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 1.75rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hrm-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hrm-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.hrm-field {
+    margin-bottom: 1.125rem;
+}
+
+.hrm-field label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.hrm-field select,
+.hrm-field textarea {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    background: var(--page-bg);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-family: inherit;
+}
+
+.hrm-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.hrm-field select:focus,
+.hrm-field textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.hrm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.hrm-btn {
+    padding: 0.625rem 1.125rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.hrm-btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+}
+
+.hrm-btn-secondary:hover {
+    background: var(--hover-bg);
+}
+
+.hrm-btn-danger {
+    background: #dc2626;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.hrm-btn-danger:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+.hrm-btn-danger:disabled,
+.hrm-btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
